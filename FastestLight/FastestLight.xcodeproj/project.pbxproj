@@ -1,0 +1,319 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		333C145C14A9AB3D00C53CBE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333C145B14A9AB3D00C53CBE /* UIKit.framework */; };
+		333C145E14A9AB3D00C53CBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333C145D14A9AB3D00C53CBE /* Foundation.framework */; };
+		333C146014A9AB3D00C53CBE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333C145F14A9AB3D00C53CBE /* CoreGraphics.framework */; };
+		333C146614A9AB3D00C53CBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 333C146414A9AB3D00C53CBE /* InfoPlist.strings */; };
+		333C146814A9AB3D00C53CBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 333C146714A9AB3D00C53CBE /* main.m */; };
+		333C146C14A9AB3D00C53CBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 333C146B14A9AB3D00C53CBE /* AppDelegate.m */; };
+		333C146F14A9AB3D00C53CBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333C146E14A9AB3D00C53CBE /* ViewController.m */; };
+		333C147214A9AB3D00C53CBE /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333C147014A9AB3D00C53CBE /* ViewController.xib */; };
+		333C147914A9AC6500C53CBE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333C147814A9AC6500C53CBE /* AVFoundation.framework */; };
+		333C148514A9AF3200C53CBE /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333C148314A9AF3200C53CBE /* AboutViewController.m */; };
+		333C148614A9AF3200C53CBE /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333C148414A9AF3200C53CBE /* AboutView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		333C145714A9AB3D00C53CBE /* FastestLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastestLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		333C145B14A9AB3D00C53CBE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		333C145D14A9AB3D00C53CBE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		333C145F14A9AB3D00C53CBE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		333C146314A9AB3D00C53CBE /* FastestLight-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FastestLight-Info.plist"; sourceTree = "<group>"; };
+		333C146514A9AB3D00C53CBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		333C146714A9AB3D00C53CBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		333C146914A9AB3D00C53CBE /* FastestLight-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FastestLight-Prefix.pch"; sourceTree = "<group>"; };
+		333C146A14A9AB3D00C53CBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		333C146B14A9AB3D00C53CBE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		333C146D14A9AB3D00C53CBE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		333C146E14A9AB3D00C53CBE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		333C147114A9AB3D00C53CBE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		333C147814A9AC6500C53CBE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		333C148214A9AF3200C53CBE /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		333C148314A9AF3200C53CBE /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		333C148414A9AF3200C53CBE /* AboutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		333C145414A9AB3D00C53CBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				333C147914A9AC6500C53CBE /* AVFoundation.framework in Frameworks */,
+				333C145C14A9AB3D00C53CBE /* UIKit.framework in Frameworks */,
+				333C145E14A9AB3D00C53CBE /* Foundation.framework in Frameworks */,
+				333C146014A9AB3D00C53CBE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		333C144C14A9AB3D00C53CBE = {
+			isa = PBXGroup;
+			children = (
+				333C146114A9AB3D00C53CBE /* FastestLight */,
+				333C145A14A9AB3D00C53CBE /* Frameworks */,
+				333C145814A9AB3D00C53CBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		333C145814A9AB3D00C53CBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				333C145714A9AB3D00C53CBE /* FastestLight.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		333C145A14A9AB3D00C53CBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				333C147814A9AC6500C53CBE /* AVFoundation.framework */,
+				333C145B14A9AB3D00C53CBE /* UIKit.framework */,
+				333C145D14A9AB3D00C53CBE /* Foundation.framework */,
+				333C145F14A9AB3D00C53CBE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		333C146114A9AB3D00C53CBE /* FastestLight */ = {
+			isa = PBXGroup;
+			children = (
+				333C148114A9AEDF00C53CBE /* App Delegate */,
+				333C148014A9AEDC00C53CBE /* Main View Controller */,
+				333C147F14A9AED800C53CBE /* About View Controller */,
+				333C146214A9AB3D00C53CBE /* Supporting Files */,
+			);
+			path = FastestLight;
+			sourceTree = "<group>";
+		};
+		333C146214A9AB3D00C53CBE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				333C146314A9AB3D00C53CBE /* FastestLight-Info.plist */,
+				333C146414A9AB3D00C53CBE /* InfoPlist.strings */,
+				333C146714A9AB3D00C53CBE /* main.m */,
+				333C146914A9AB3D00C53CBE /* FastestLight-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		333C147F14A9AED800C53CBE /* About View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				333C148214A9AF3200C53CBE /* AboutViewController.h */,
+				333C148314A9AF3200C53CBE /* AboutViewController.m */,
+				333C148414A9AF3200C53CBE /* AboutView.xib */,
+			);
+			name = "About View Controller";
+			sourceTree = "<group>";
+		};
+		333C148014A9AEDC00C53CBE /* Main View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				333C146D14A9AB3D00C53CBE /* ViewController.h */,
+				333C146E14A9AB3D00C53CBE /* ViewController.m */,
+				333C147014A9AB3D00C53CBE /* ViewController.xib */,
+			);
+			name = "Main View Controller";
+			sourceTree = "<group>";
+		};
+		333C148114A9AEDF00C53CBE /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				333C146A14A9AB3D00C53CBE /* AppDelegate.h */,
+				333C146B14A9AB3D00C53CBE /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		333C145614A9AB3D00C53CBE /* FastestLight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 333C147514A9AB3D00C53CBE /* Build configuration list for PBXNativeTarget "FastestLight" */;
+			buildPhases = (
+				333C145314A9AB3D00C53CBE /* Sources */,
+				333C145414A9AB3D00C53CBE /* Frameworks */,
+				333C145514A9AB3D00C53CBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FastestLight;
+			productName = FastestLight;
+			productReference = 333C145714A9AB3D00C53CBE /* FastestLight.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		333C144E14A9AB3D00C53CBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "University of Illinois";
+			};
+			buildConfigurationList = 333C145114A9AB3D00C53CBE /* Build configuration list for PBXProject "FastestLight" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 333C144C14A9AB3D00C53CBE;
+			productRefGroup = 333C145814A9AB3D00C53CBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				333C145614A9AB3D00C53CBE /* FastestLight */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		333C145514A9AB3D00C53CBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				333C146614A9AB3D00C53CBE /* InfoPlist.strings in Resources */,
+				333C147214A9AB3D00C53CBE /* ViewController.xib in Resources */,
+				333C148614A9AF3200C53CBE /* AboutView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		333C145314A9AB3D00C53CBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				333C146814A9AB3D00C53CBE /* main.m in Sources */,
+				333C146C14A9AB3D00C53CBE /* AppDelegate.m in Sources */,
+				333C146F14A9AB3D00C53CBE /* ViewController.m in Sources */,
+				333C148514A9AF3200C53CBE /* AboutViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		333C146414A9AB3D00C53CBE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				333C146514A9AB3D00C53CBE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		333C147014A9AB3D00C53CBE /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				333C147114A9AB3D00C53CBE /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		333C147314A9AB3D00C53CBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		333C147414A9AB3D00C53CBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		333C147614A9AB3D00C53CBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FastestLight/FastestLight-Prefix.pch";
+				INFOPLIST_FILE = "FastestLight/FastestLight-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		333C147714A9AB3D00C53CBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FastestLight/FastestLight-Prefix.pch";
+				INFOPLIST_FILE = "FastestLight/FastestLight-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		333C145114A9AB3D00C53CBE /* Build configuration list for PBXProject "FastestLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				333C147314A9AB3D00C53CBE /* Debug */,
+				333C147414A9AB3D00C53CBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		333C147514A9AB3D00C53CBE /* Build configuration list for PBXNativeTarget "FastestLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				333C147614A9AB3D00C53CBE /* Debug */,
+				333C147714A9AB3D00C53CBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 333C144E14A9AB3D00C53CBE /* Project object */;
+}
