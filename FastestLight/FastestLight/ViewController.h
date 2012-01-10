@@ -12,9 +12,14 @@
 @interface ViewController : UIViewController
 {
     BOOL flashlightOn;
+    BOOL strobeOn;
     IBOutlet UIButton *powerButton;
+    IBOutlet UISlider *strobeSlider;
+    NSTimer *strobeTimer;
 }
 
+@property (nonatomic, retain) NSTimer *strobeTimer;
+@property (nonatomic, retain) IBOutlet UISlider *strobeSlider;
 @property (nonatomic, retain) IBOutlet UIButton *powerButton;
 
 - (IBAction)changePower:(id)sender;
@@ -24,6 +29,14 @@
 - (void) turnOn;
 
 - (void) turnOff;
+
+- (IBAction)sliderChanged:(id)sender;
+
+- (void) setStrobe;
+
+- (void) stopStrobe;
+
+- (void) flashStrobe;
 
 
 

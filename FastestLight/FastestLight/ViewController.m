@@ -12,6 +12,8 @@
 @implementation ViewController
 
 @synthesize powerButton;
+@synthesize strobeSlider;
+@synthesize strobeTimer;
 
 - (void)didReceiveMemoryWarning
 {
@@ -41,6 +43,8 @@
     
     [self turnOn];
     
+    strobeOn = NO;
+    
     // prevent screen from turning off
     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     
@@ -64,8 +68,12 @@
 {
     [super viewWillAppear:animated];
     
-    if (flashlightOn == NO) {
+    if ((strobeSlider.value==0) && (flashlightOn == NO))
+    {
         [self turnOn];
+    }
+    if (strobeSlider.value>0) {
+        NSLog(@"set strobe");
     }
     
 }
@@ -84,6 +92,9 @@
 - (void)viewDidDisappear:(BOOL)animated
 {
 	[super viewDidDisappear:animated];
+    if (strobeOn == YES) {
+        [self stopStrobe];
+    }
     [self turnOff];
 }
 
@@ -126,6 +137,19 @@
     }
 }
 
+- (IBAction)sliderChanged:(id)sender
+{
+    NSLog(@"sliderChanged: %f", strobeSlider.value);
+    if (strobeSlider.value > 0) {
+        NSLog(@"turn on strobe");
+        strobeOn = YES;
+        [self setStrobe];
+    }
+    if (strobeSlider.value == 0) {
+        [self stopStrobe];
+    }
+}
+
 - (IBAction)flipView:(id)sender
 {
     AboutViewController *aboutView = [[AboutViewController alloc] initWithNibName:@"AboutView" bundle:nil];
@@ -160,11 +184,34 @@
     flashlightOn = NO;
 }
 
+- (void) setStrobe
+{
+    strobeTimer = [NSTimer scheduledTimerWithTimeInterval:strobeSlider.value target:self selector:@selector(flashStrobe) userInfo:nil repeats:YES];
+}
+
+- (void) flashStrobe
+{
+    [self turnOn];
+    [self turnOff];
+}
+
+- (void) stopStrobe
+{
+    NSLog(@"stop strobe");
+    [strobeTimer invalidate];
+    strobeTimer = nil;
+    strobeOn = NO;
+    
+    [self turnOff];
+}
+
 #pragma mark - Memory Management
 
 - (void) dealloc
 {
+    [strobeTimer release];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [strobeSlider release];
     [powerButton release];
     [super dealloc];
 }
