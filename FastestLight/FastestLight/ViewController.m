@@ -24,9 +24,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"viewDidLoad");
     
-    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
 	// Do any additional setup after loading the view, typically from a nib.
     
     /*
@@ -40,6 +38,17 @@
         [device unlockForConfiguration];
     }
      */
+    
+    [self turnOn];
+    
+    // prevent screen from turning off
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    
+    // set up observers to refresh screen
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewWillAppear:) name:UIApplicationDidBecomeActiveNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewDidDisappear:) name:UIApplicationWillResignActiveNotification object:nil];
     
     NSLog(@"set up background");
 }
@@ -55,15 +64,10 @@
 {
     [super viewWillAppear:animated];
     
-    flashlightOn = YES;
-    
-    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    if ([device hasTorch])
-    {
-        [device lockForConfiguration:nil];
-        [device setTorchMode:AVCaptureTorchModeOn];  // use AVCaptureTorchModeOff to turn off
-        [device unlockForConfiguration];
+    if (flashlightOn == NO) {
+        [self turnOn];
     }
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -74,11 +78,13 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
+    
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
 	[super viewDidDisappear:animated];
+    [self turnOff];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -91,8 +97,9 @@
 
 - (IBAction)changePower:(id)sender
 {
-    NSLog(@"change power");
     if (flashlightOn == YES) {
+        [self turnOff];
+        /*
         AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
         if ([device hasTorch])
         {
@@ -101,9 +108,12 @@
             [device unlockForConfiguration];
         }
         flashlightOn = NO;
+         */
     }
     else
     {
+        [self turnOn];
+        /*
         AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
         if ([device hasTorch])
         {
@@ -112,6 +122,7 @@
             [device unlockForConfiguration];
         }
         flashlightOn = YES;
+         */
     }
 }
 
@@ -123,10 +134,37 @@
     [aboutView release];
 }
 
+#pragma mark - Flash Light Methods
+
+- (void) turnOn
+{
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    if ([device hasTorch])
+    {
+        [device lockForConfiguration:nil];
+        [device setTorchMode:AVCaptureTorchModeOn];  // use AVCaptureTorchModeOff to turn off
+        [device unlockForConfiguration];
+    }
+    flashlightOn = YES;
+}
+
+- (void) turnOff
+{
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    if ([device hasTorch])
+    {
+        [device lockForConfiguration:nil];
+        [device setTorchMode:AVCaptureTorchModeOff];  // use AVCaptureTorchModeOff to turn off
+        [device unlockForConfiguration];
+    }
+    flashlightOn = NO;
+}
+
 #pragma mark - Memory Management
 
 - (void) dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [powerButton release];
     [super dealloc];
 }

@@ -21,6 +21,10 @@
 
 - (IBAction)flipView:(id)sender;
 
+- (void) turnOn;
+
+- (void) turnOff;
+
 
 
 
