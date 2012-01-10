@@ -68,11 +68,11 @@
 {
     [super viewWillAppear:animated];
     
-    if ((strobeSlider.value==0) && (flashlightOn == NO))
+    if ((strobeSlider.value==0) && (powerOn == YES))
     {
         [self turnOn];
     }
-    if (strobeSlider.value>0) {
+    if ((strobeSlider.value>0) && (powerOn == YES)) {
         NSLog(@"set strobe");
         [self setStrobe];
     }
@@ -94,9 +94,9 @@
 {
 	[super viewDidDisappear:animated];
     if (strobeOn == YES) {
-        [self stopStrobe];
+        //[self stopStrobe];
     }
-    [self turnOff];
+    //[self turnOff];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -109,7 +109,7 @@
 
 - (IBAction)changePower:(id)sender
 {
-    if (flashlightOn == YES) {
+    if (powerOn == YES) {
         [self turnOff];
         /*
         AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
@@ -145,11 +145,17 @@
     if (strobeSlider.value > 0) {
         NSLog(@"turn on strobe");
         //strobeOn = YES;
-        [self setStrobe];
+        if (powerOn == YES) {
+            [self setStrobe];
+        }
+        //[self setStrobe];
     }
     if (strobeSlider.value == 0) {
         NSLog(@"just turn on light");
-        [self turnOn];
+        if (powerOn == YES) {
+            [self turnOn];
+        }
+        //[self turnOn];
         //[self stopStrobe];
     }
 }
@@ -173,7 +179,8 @@
         [device setTorchMode:AVCaptureTorchModeOn];  // use AVCaptureTorchModeOff to turn off
         [device unlockForConfiguration];
     }
-    flashlightOn = YES;
+    //flashlightOn = YES;
+    powerOn = YES;
 }
 
 - (void) turnOff
@@ -185,7 +192,8 @@
         [device setTorchMode:AVCaptureTorchModeOff];  // use AVCaptureTorchModeOff to turn off
         [device unlockForConfiguration];
     }
-    flashlightOn = NO;
+    //flashlightOn = NO;
+    powerOn = NO;
 }
 
 - (void) setStrobe
@@ -207,7 +215,7 @@
     strobeTimer = nil;
     strobeOn = NO;
     
-    [self turnOff];
+    //[self turnOff];
 }
 
 #pragma mark - Memory Management

@@ -13,6 +13,7 @@
 {
     BOOL flashlightOn;
     BOOL strobeOn;
+    BOOL powerOn;
     IBOutlet UIButton *powerButton;
     IBOutlet UISlider *strobeSlider;
     NSTimer *strobeTimer;
