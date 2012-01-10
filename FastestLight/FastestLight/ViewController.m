@@ -74,6 +74,7 @@
     }
     if (strobeSlider.value>0) {
         NSLog(@"set strobe");
+        [self setStrobe];
     }
     
 }
@@ -140,13 +141,16 @@
 - (IBAction)sliderChanged:(id)sender
 {
     NSLog(@"sliderChanged: %f", strobeSlider.value);
+    [self stopStrobe];
     if (strobeSlider.value > 0) {
         NSLog(@"turn on strobe");
-        strobeOn = YES;
+        //strobeOn = YES;
         [self setStrobe];
     }
     if (strobeSlider.value == 0) {
-        [self stopStrobe];
+        NSLog(@"just turn on light");
+        [self turnOn];
+        //[self stopStrobe];
     }
 }
 
@@ -187,6 +191,7 @@
 - (void) setStrobe
 {
     strobeTimer = [NSTimer scheduledTimerWithTimeInterval:strobeSlider.value target:self selector:@selector(flashStrobe) userInfo:nil repeats:YES];
+    strobeOn = YES;
 }
 
 - (void) flashStrobe
