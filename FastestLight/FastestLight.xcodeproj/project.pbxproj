@@ -18,6 +18,7 @@
 		333C147914A9AC6500C53CBE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333C147814A9AC6500C53CBE /* AVFoundation.framework */; };
 		333C148514A9AF3200C53CBE /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333C148314A9AF3200C53CBE /* AboutViewController.m */; };
 		333C148614A9AF3200C53CBE /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333C148414A9AF3200C53CBE /* AboutView.xib */; };
+		334943E614BD5FD1002E54B4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 334943E514BD5FD1002E54B4 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		333C148214A9AF3200C53CBE /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		333C148314A9AF3200C53CBE /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		333C148414A9AF3200C53CBE /* AboutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
+		334943E514BD5FD1002E54B4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				334943E614BD5FD1002E54B4 /* MessageUI.framework in Frameworks */,
 				333C147914A9AC6500C53CBE /* AVFoundation.framework in Frameworks */,
 				333C145C14A9AB3D00C53CBE /* UIKit.framework in Frameworks */,
 				333C145E14A9AB3D00C53CBE /* Foundation.framework in Frameworks */,
@@ -75,6 +78,7 @@
 		333C145A14A9AB3D00C53CBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				334943E514BD5FD1002E54B4 /* MessageUI.framework */,
 				333C147814A9AC6500C53CBE /* AVFoundation.framework */,
 				333C145B14A9AB3D00C53CBE /* UIKit.framework */,
 				333C145D14A9AB3D00C53CBE /* Foundation.framework */,

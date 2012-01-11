@@ -7,12 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MessageUI/MessageUI.h"
 
-@interface AboutViewController : UIViewController
+@interface AboutViewController : UIViewController <MFMailComposeViewControllerDelegate>
 {
-    
+    IBOutlet UIButton *emailButton;
+    IBOutlet UIButton *websiteButton;
 }
 
+@property (nonatomic, retain) IBOutlet UIButton *emailButton;
+@property (nonatomic, retain) IBOutlet UIButton *websiteButton;
+
 - (IBAction)backAction:(id)sender;
+
+- (IBAction)sendEmail:(id)sender;
+- (void) showEmailModalView;
+- (IBAction)visitWebsite:(id)sender;
 
 @end

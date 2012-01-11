@@ -29,20 +29,10 @@
     
 	// Do any additional setup after loading the view, typically from a nib.
     
-    /*
-    flashlightOn = YES;
-    
-    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    if ([device hasTorch])
-    {
-        [device lockForConfiguration:nil];
-        [device setTorchMode:AVCaptureTorchModeOn];  // use AVCaptureTorchModeOff to turn off
-        [device unlockForConfiguration];
-    }
-     */
-    
     [self turnOn];
     
+    // set BOOL values
+    powerOn = YES;
     strobeOn = NO;
     
     // prevent screen from turning off
@@ -95,6 +85,8 @@
 	[super viewDidDisappear:animated];
     if (strobeOn == YES) {
         //[self stopStrobe];
+        [strobeTimer invalidate];
+        strobeTimer = nil;
     }
     //[self turnOff];
 }
@@ -110,7 +102,15 @@
 - (IBAction)changePower:(id)sender
 {
     if (powerOn == YES) {
-        [self turnOff];
+        if (strobeOn == YES) {
+            [self stopStrobe];
+        }
+        else
+        {
+            [self turnOff];
+        }
+        //[self turnOff];
+        powerOn = NO;
         /*
         AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
         if ([device hasTorch])
@@ -124,7 +124,15 @@
     }
     else
     {
-        [self turnOn];
+        if (strobeOn == YES) {
+            [self setStrobe];
+        }
+        else
+        {
+            [self turnOn];
+        }
+        //[self turnOn];
+        powerOn = YES;
         /*
         AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
         if ([device hasTorch])
@@ -180,7 +188,7 @@
         [device unlockForConfiguration];
     }
     //flashlightOn = YES;
-    powerOn = YES;
+    //powerOn = YES;
 }
 
 - (void) turnOff
@@ -193,12 +201,20 @@
         [device unlockForConfiguration];
     }
     //flashlightOn = NO;
-    powerOn = NO;
+    //powerOn = NO;
 }
 
 - (void) setStrobe
 {
-    strobeTimer = [NSTimer scheduledTimerWithTimeInterval:strobeSlider.value target:self selector:@selector(flashStrobe) userInfo:nil repeats:YES];
+    double strobeLength;
+    if (strobeSlider.value<1) {
+        strobeLength = fabs(1-strobeSlider.value);
+    }
+    else
+    {
+        strobeLength = .01;
+    }
+    strobeTimer = [NSTimer scheduledTimerWithTimeInterval:strobeLength target:self selector:@selector(flashStrobe) userInfo:nil repeats:YES];
     strobeOn = YES;
 }
 

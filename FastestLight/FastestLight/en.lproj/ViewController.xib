@@ -39,7 +39,7 @@
 					<object class="IBUIButton" id="758453799">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{68, 145}, {185, 107}}</string>
+						<string key="NSFrame">{{68, 92}, {185, 107}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSNextKeyView" ref="642438218"/>
 						<string key="NSReuseIdentifierKey">_NS:225</string>
@@ -76,7 +76,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{288, 432}, {18, 19}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:225</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -96,7 +95,7 @@
 					<object class="IBUISlider" id="642438218">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{57, 298}, {223, 23}}</string>
+						<string key="NSFrame">{{49, 304}, {223, 23}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSNextKeyView" ref="780259408"/>
 						<string key="NSReuseIdentifierKey">_NS:623</string>

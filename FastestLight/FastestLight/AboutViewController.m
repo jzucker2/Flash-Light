@@ -8,7 +8,10 @@
 
 #import "AboutViewController.h"
 
+
 @implementation AboutViewController
+
+@synthesize emailButton, websiteButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,6 +54,67 @@
 - (IBAction)backAction:(id)sender
 {
     [self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark -
+#pragma mark Show Email Modal view
+
+- (void) showEmailModalView
+{
+    MFMailComposeViewController *mailView = [[MFMailComposeViewController alloc] init];
+    mailView.mailComposeDelegate = self;
+    
+    [mailView setSubject:@"From Fastest Flashlight"];
+    
+    NSString *recipient = @"jordan.zucker@gmail.com";
+    NSArray *recipientArray = [[NSArray alloc] initWithObjects:recipient, nil];
+    
+    [mailView setToRecipients:recipientArray];
+    [recipientArray release];
+    
+    [mailView setMessageBody:@"" isHTML:NO];
+    
+    [self presentModalViewController:mailView animated:YES];
+    [mailView release];
+    
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result) {
+        case MFMailComposeResultSent:
+            break;
+        case MFMailComposeResultSaved:
+            break;
+        case MFMailComposeResultCancelled:
+            break;
+        case MFMailComposeResultFailed:
+            break;
+        default:
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Email" message:@"Sending failed - Unknown error :(" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+            [alert release];
+            
+        }
+            break;
+    }
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+
+- (IBAction)visitWebsite:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:@"http://www.stackoverflow.com"];
+    if (![[UIApplication sharedApplication] openURL:url])
+    {
+        NSLog(@"%@%@",@"Failed to open url:",[url description]);
+    }
+}
+
+- (IBAction)sendEmail:(id)sender
+{
+    [self showEmailModalView];
 }
 
 @end
