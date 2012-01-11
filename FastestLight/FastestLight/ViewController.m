@@ -45,9 +45,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewDidDisappear:) name:UIApplicationWillResignActiveNotification object:nil];
     
     NSLog(@"set up background");
+    
+    [powerButton setBackgroundColor:[UIColor greenColor]];
+    //[powerButton setBackgroundImage:[UIImage imageNamed:@"on.png"] forState:UIControlStateNormal];
 }
 
-- (void)viewDidUnload
+- (void)viewDiUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -111,6 +114,8 @@
         }
         //[self turnOff];
         powerOn = NO;
+        //[powerButton setBackgroundImage:[UIImage imageNamed:@"off.png"] forState:UIControlStateNormal];
+        [powerButton setBackgroundColor:[UIColor redColor]];
         /*
         AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
         if ([device hasTorch])
@@ -133,6 +138,8 @@
         }
         //[self turnOn];
         powerOn = YES;
+        [powerButton setBackgroundColor:[UIColor greenColor]];
+        //[powerButton setBackgroundImage:[UIImage imageNamed:@"on.png"] forState:UIControlStateNormal];
         /*
         AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
         if ([device hasTorch])

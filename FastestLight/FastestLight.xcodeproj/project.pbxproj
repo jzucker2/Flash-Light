@@ -19,6 +19,8 @@
 		333C148514A9AF3200C53CBE /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333C148314A9AF3200C53CBE /* AboutViewController.m */; };
 		333C148614A9AF3200C53CBE /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333C148414A9AF3200C53CBE /* AboutView.xib */; };
 		334943E614BD5FD1002E54B4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 334943E514BD5FD1002E54B4 /* MessageUI.framework */; };
+		335118B414BD754400A62046 /* off.png in Resources */ = {isa = PBXBuildFile; fileRef = 335118B214BD754400A62046 /* off.png */; };
+		335118B514BD754400A62046 /* on.png in Resources */ = {isa = PBXBuildFile; fileRef = 335118B314BD754400A62046 /* on.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		333C148314A9AF3200C53CBE /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		333C148414A9AF3200C53CBE /* AboutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
 		334943E514BD5FD1002E54B4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		335118B214BD754400A62046 /* off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = off.png; sourceTree = "<group>"; };
+		335118B314BD754400A62046 /* on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = on.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		333C146214A9AB3D00C53CBE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				335118B214BD754400A62046 /* off.png */,
+				335118B314BD754400A62046 /* on.png */,
 				333C146314A9AB3D00C53CBE /* FastestLight-Info.plist */,
 				333C146414A9AB3D00C53CBE /* InfoPlist.strings */,
 				333C146714A9AB3D00C53CBE /* main.m */,
@@ -192,6 +198,8 @@
 				333C146614A9AB3D00C53CBE /* InfoPlist.strings in Resources */,
 				333C147214A9AB3D00C53CBE /* ViewController.xib in Resources */,
 				333C148614A9AF3200C53CBE /* AboutView.xib in Resources */,
+				335118B414BD754400A62046 /* off.png in Resources */,
+				335118B514BD754400A62046 /* on.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
