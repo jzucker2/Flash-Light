@@ -12,6 +12,7 @@
 @implementation AboutViewController
 
 @synthesize emailButton, websiteButton;
+@synthesize versionLabel, buildLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +37,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    NSString *versionString = [NSString stringWithFormat:@"Version %@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
+    NSString *buildString = [NSString stringWithFormat:@"Build %@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
+    versionLabel.text = versionString;
+    buildLabel.text = buildString;
 }
 
 - (void)viewDidUnload
@@ -115,6 +120,16 @@
 - (IBAction)sendEmail:(id)sender
 {
     [self showEmailModalView];
+}
+
+#pragma mark - Memory Management
+
+- (void) dealloc
+{
+    [buildLabel release];
+    [websiteButton release];
+    [emailButton release];
+    [versionLabel release];
 }
 
 @end

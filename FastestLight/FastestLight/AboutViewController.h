@@ -13,8 +13,11 @@
 {
     IBOutlet UIButton *emailButton;
     IBOutlet UIButton *websiteButton;
+    IBOutlet UILabel *versionLabel;
+    IBOutlet UILabel *buildLabel;
 }
-
+@property (nonatomic, retain) IBOutlet UILabel *buildLabel;
+@property (nonatomic, retain) IBOutlet UILabel *versionLabel;
 @property (nonatomic, retain) IBOutlet UIButton *emailButton;
 @property (nonatomic, retain) IBOutlet UIButton *websiteButton;
 
