@@ -75,7 +75,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">This app designed by</string>
+						<string key="IBUIText">This app written by</string>
 						<object class="NSColor" key="IBUITextColor" id="688751231">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MCAwIDAAA</bytes>
@@ -118,7 +118,7 @@
 					<object class="IBUIButton" id="820744302">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{76, 220}, {169, 51}}</string>
+						<string key="NSFrame">{{78, 193}, {169, 51}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="998116355"/>
@@ -154,7 +154,7 @@
 					<object class="IBUIButton" id="998116355">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{76, 294}, {169, 51}}</string>
+						<string key="NSFrame">{{78, 269}, {169, 51}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="360532918"/>
@@ -202,7 +202,6 @@
 						<string key="NSFrame">{{242, 419}, {58, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:328</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -415,10 +414,10 @@ AAgACAAIAAEAAQABAAE</bytes>
 							<reference ref="870253425"/>
 							<reference ref="211516945"/>
 							<reference ref="379471424"/>
-							<reference ref="820744302"/>
-							<reference ref="998116355"/>
 							<reference ref="925325427"/>
 							<reference ref="360532918"/>
+							<reference ref="820744302"/>
+							<reference ref="998116355"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
