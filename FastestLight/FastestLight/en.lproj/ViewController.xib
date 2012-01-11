@@ -39,7 +39,7 @@
 					<object class="IBUIButton" id="758453799">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{68, 92}, {185, 107}}</string>
+						<string key="NSFrame">{{67, 96}, {186, 107}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="642438218"/>
@@ -106,7 +106,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<object class="NSColor" key="IBUIMinimumTrackTintColor" id="705844722">
+						<object class="NSColor" key="IBUIMinimumTrackTintColor" id="305647634">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MCAwIDAAA</bytes>
 						</object>
@@ -123,7 +123,7 @@
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="758453799"/>
-				<reference key="IBUIBackgroundColor" ref="705844722"/>
+				<reference key="IBUIBackgroundColor" ref="305647634"/>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -207,8 +207,8 @@
 						<reference key="object" ref="774585933"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="780259408"/>
-							<reference ref="758453799"/>
 							<reference ref="642438218"/>
+							<reference ref="758453799"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
