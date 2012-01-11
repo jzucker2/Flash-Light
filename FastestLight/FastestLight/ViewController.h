@@ -17,6 +17,7 @@
     IBOutlet UIButton *powerButton;
     IBOutlet UISlider *strobeSlider;
     NSTimer *strobeTimer;
+    double strobeLength;
 }
 
 @property (nonatomic, retain) NSTimer *strobeTimer;

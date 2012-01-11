@@ -206,13 +206,12 @@
 
 - (void) setStrobe
 {
-    double strobeLength;
     if (strobeSlider.value<1) {
         strobeLength = fabs(1-strobeSlider.value);
     }
     else
     {
-        strobeLength = .01;
+        strobeLength = .001;
     }
     strobeTimer = [NSTimer scheduledTimerWithTimeInterval:strobeLength target:self selector:@selector(flashStrobe) userInfo:nil repeats:YES];
     strobeOn = YES;
@@ -221,6 +220,8 @@
 - (void) flashStrobe
 {
     [self turnOn];
+    double offTime = strobeLength/2;
+    [NSThread sleepForTimeInterval:offTime];
     [self turnOff];
 }
 
