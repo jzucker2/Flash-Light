@@ -110,7 +110,7 @@
 
 - (IBAction)visitWebsite:(id)sender
 {
-    NSURL *url = [NSURL URLWithString:@"http://www.stackoverflow.com"];
+    NSURL *url = [NSURL URLWithString:@"http://www.jordan.zucker.net"];
     if (![[UIApplication sharedApplication] openURL:url])
     {
         NSLog(@"%@%@",@"Failed to open url:",[url description]);
