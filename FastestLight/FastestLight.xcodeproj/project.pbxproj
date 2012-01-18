@@ -11,6 +11,8 @@
 		33037CB614C675BD00AD707A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33037CB514C675BD00AD707A /* Icon.png */; };
 		33037CBA14C67B7900AD707A /* on.png in Resources */ = {isa = PBXBuildFile; fileRef = 33037CB914C67B7900AD707A /* on.png */; };
 		33037CBC14C683C400AD707A /* off.png in Resources */ = {isa = PBXBuildFile; fileRef = 33037CBB14C683C400AD707A /* off.png */; };
+		33037CBE14C689CD00AD707A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33037CBD14C689CD00AD707A /* Default@2x.png */; };
+		33037CC014C689D300AD707A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 33037CBF14C689D300AD707A /* Default.png */; };
 		333C145C14A9AB3D00C53CBE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333C145B14A9AB3D00C53CBE /* UIKit.framework */; };
 		333C145E14A9AB3D00C53CBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333C145D14A9AB3D00C53CBE /* Foundation.framework */; };
 		333C146014A9AB3D00C53CBE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333C145F14A9AB3D00C53CBE /* CoreGraphics.framework */; };
@@ -30,6 +32,8 @@
 		33037CB514C675BD00AD707A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		33037CB914C67B7900AD707A /* on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = on.png; sourceTree = "<group>"; };
 		33037CBB14C683C400AD707A /* off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = off.png; sourceTree = "<group>"; };
+		33037CBD14C689CD00AD707A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		33037CBF14C689D300AD707A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		333C145714A9AB3D00C53CBE /* FastestLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastestLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		333C145B14A9AB3D00C53CBE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		333C145D14A9AB3D00C53CBE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,6 +70,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33037CC114C68A2E00AD707A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				33037CBB14C683C400AD707A /* off.png */,
+				33037CBF14C689D300AD707A /* Default.png */,
+				33037CBD14C689CD00AD707A /* Default@2x.png */,
+				33037CB914C67B7900AD707A /* on.png */,
+				33037CB514C675BD00AD707A /* Icon.png */,
+				33037CB214C6754A00AD707A /* Icon@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		333C144C14A9AB3D00C53CBE = {
 			isa = PBXGroup;
 			children = (
@@ -109,10 +126,7 @@
 		333C146214A9AB3D00C53CBE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				33037CBB14C683C400AD707A /* off.png */,
-				33037CB914C67B7900AD707A /* on.png */,
-				33037CB514C675BD00AD707A /* Icon.png */,
-				33037CB214C6754A00AD707A /* Icon@2x.png */,
+				33037CC114C68A2E00AD707A /* Images */,
 				333C146314A9AB3D00C53CBE /* FastestLight-Info.plist */,
 				333C146414A9AB3D00C53CBE /* InfoPlist.strings */,
 				333C146714A9AB3D00C53CBE /* main.m */,
@@ -208,6 +222,8 @@
 				33037CB614C675BD00AD707A /* Icon.png in Resources */,
 				33037CBA14C67B7900AD707A /* on.png in Resources */,
 				33037CBC14C683C400AD707A /* off.png in Resources */,
+				33037CBE14C689CD00AD707A /* Default@2x.png in Resources */,
+				33037CC014C689D300AD707A /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
