@@ -46,6 +46,9 @@
     
     NSLog(@"set up background");
     
+    [powerButton setBackgroundImage:[UIImage imageNamed:@"on.png"] forState:UIControlStateNormal];
+    //[strobeSlider setMaximumValue:<#(float)#>
+    
     //[powerButton setBackgroundColor:[UIColor greenColor]];
     //[powerButton setBackgroundImage:[UIImage imageNamed:@"on.png"] forState:UIControlStateNormal];
 }
@@ -126,10 +129,11 @@
         }
         flashlightOn = NO;
          */
+        [powerButton setBackgroundImage:[UIImage imageNamed:@"off.png"] forState:UIControlStateNormal];
     }
     else
     {
-        if (strobeOn == YES) {
+        if (strobeSlider.value>0) {
             [self setStrobe];
         }
         else
@@ -150,6 +154,7 @@
         }
         flashlightOn = YES;
          */
+        [powerButton setBackgroundImage:[UIImage imageNamed:@"on.png"] forState:UIControlStateNormal];
     }
 }
 
@@ -213,6 +218,7 @@
 
 - (void) setStrobe
 {
+    /*
     if (strobeSlider.value<1) {
         strobeLength = fabs(1-strobeSlider.value);
     }
@@ -220,6 +226,9 @@
     {
         strobeLength = .001;
     }
+     */
+    strobeLength = fabs(1-strobeSlider.value);
+    //NSLog(@"strobeLength is %f", strobeLength);
     strobeTimer = [NSTimer scheduledTimerWithTimeInterval:strobeLength target:self selector:@selector(flashStrobe) userInfo:nil repeats:YES];
     strobeOn = YES;
 }
